@@ -1,0 +1,202 @@
+export type Article = {
+  slug: string
+  title: string
+  subtitle: string
+  readTime: string
+  date: string
+  type: 'article' | 'field-note'
+  content: ArticleBlock[]
+}
+
+export type ArticleBlock =
+  | { kind: 'paragraph'; text: string }
+  | { kind: 'heading'; text: string }
+  | { kind: 'list'; items: string[] }
+  | { kind: 'quote'; text: string }
+
+export const articles: Article[] = [
+  {
+    slug: 'clarity-is-a-practice',
+    title: 'Clarity Is a Practice, Not a Personality Trait',
+    subtitle: 'How I navigate confusion in product cycles — and a simple model that converts ambiguity into manageable decisions.',
+    readTime: '5 min read',
+    date: 'July 2025',
+    type: 'article',
+    content: [
+      { kind: 'paragraph', text: 'Confusion is not the enemy of leadership. Unexamined confusion is.' },
+      { kind: 'paragraph', text: 'In product organizations, confusion is constant: conflicting signals, moving priorities, partial data, stakeholder pressure, and imperfect timing. The problem is not that ambiguity exists. The problem is that we often respond by borrowing certainty from comparison.' },
+      { kind: 'paragraph', text: 'We compare our roadmap to another team\'s launch. We compare our metrics to someone else\'s market. We compare our pace to someone else\'s context.' },
+      { kind: 'paragraph', text: 'Comparison creates urgency, but not always clarity.' },
+      { kind: 'heading', text: 'Why High-Performing Teams Still Get Stuck' },
+      { kind: 'paragraph', text: 'Most confusion comes from mixing three different questions:' },
+      { kind: 'list', items: ['What is true?', 'What matters?', 'What now?'] },
+      { kind: 'paragraph', text: 'Teams often jump from noisy inputs directly to action without separating these layers. When this happens, outcomes look familiar:' },
+      { kind: 'list', items: ['Priorities change weekly', 'Decision ownership blurs', 'Execution feels busy but directionless'] },
+      { kind: 'paragraph', text: 'The fix is not "more analysis." The fix is structured thinking.' },
+      { kind: 'heading', text: 'A Simple Clarity Model' },
+      { kind: 'paragraph', text: 'When I sense confusion in a product cycle, I run this sequence:' },
+      { kind: 'list', items: [
+        'Facts — What do we know versus assume?',
+        'Framing — What exact problem are we solving?',
+        'Filters — What constraints are real (time, risk, compliance, capacity)?',
+        'Forks — What are our top two options?',
+        'Finish line — What result defines "good enough" for this phase?',
+      ] },
+      { kind: 'paragraph', text: 'This model turns anxiety into motion. It does not remove uncertainty, but it converts uncertainty into manageable decisions.' },
+      { kind: 'heading', text: 'The Comparison Trap' },
+      { kind: 'paragraph', text: 'One of the biggest leadership traps is optimizing for external optics over internal integrity.' },
+      { kind: 'paragraph', text: 'A beautiful roadmap can still hide weak decision logic. A polished launch can still miss user value. A crowded calendar can still reflect unclear priorities.' },
+      { kind: 'paragraph', text: 'Real progress happens when teams stop asking, "How do we look?" and start asking, "What are we learning, and what changes next because of it?"' },
+      { kind: 'heading', text: 'Leadership Responsibility' },
+      { kind: 'paragraph', text: 'Leaders are not paid to eliminate ambiguity. They are paid to make ambiguity navigable.' },
+      { kind: 'paragraph', text: 'That means:' },
+      { kind: 'list', items: [
+        'Naming tradeoffs early',
+        'Clarifying decision rights',
+        'Protecting teams from reactive priority churn',
+        'Building confidence through transparent reasoning, not forced certainty',
+      ] },
+      { kind: 'paragraph', text: 'When teams see the logic behind decisions, trust rises even if outcomes are imperfect.' },
+      { kind: 'heading', text: 'Closing' },
+      { kind: 'paragraph', text: 'We are all confused at times. That is human. What matters is whether confusion becomes drift or design.' },
+      { kind: 'paragraph', text: 'My own shift has been this: I no longer treat confusion as a signal to rush. I treat it as a signal to frame better.' },
+      { kind: 'paragraph', text: 'Clarity is not a personality trait. It is a practice. And in product leadership, that practice is often the difference between motion and progress.' },
+    ],
+  },
+  {
+    slug: 'what-winning-means-in-product',
+    title: 'What Winning Actually Means in Product',
+    subtitle: 'Why I stopped measuring success by speed and started measuring it by decision quality.',
+    readTime: '5 min read',
+    date: 'July 2025',
+    type: 'article',
+    content: [
+      { kind: 'paragraph', text: 'In product leadership, success is uniquely ambiguous: a launch can look impressive on paper and still fail in customer adoption, while an "invisible" decision can quietly unlock years of value.' },
+      { kind: 'paragraph', text: 'Early in my career, I thought success meant ranking first: first to ship, first to present, first to close. Over time, I learned that this definition breaks in complex environments. In modern product work, success is less about outperforming others and more about outgrowing your previous system of thinking.' },
+      { kind: 'paragraph', text: 'A product team can "win" a roadmap cycle and still lose trust. A leader can "win" a debate and still weaken alignment. A company can "win" quarterly metrics and still miss the market shift.' },
+      { kind: 'paragraph', text: 'The deeper question is not "Did we win?" It is: "Did we become better at making high-quality decisions under real constraints?"' },
+      { kind: 'heading', text: 'What Winning Actually Means' },
+      { kind: 'paragraph', text: 'Winning is not merely crossing the finish line first. Winning is when the outcome is repeatable, explainable, and scalable.' },
+      { kind: 'paragraph', text: 'In practical terms, that means:' },
+      { kind: 'list', items: [
+        'Clarity over noise — We solved the right problem, not just the loudest one.',
+        'Tradeoffs made explicit — We chose consciously, not accidentally.',
+        'Learning velocity — We improved the quality of our next decision.',
+      ] },
+      { kind: 'paragraph', text: 'This is why I no longer frame success as a one-time event. I frame it as a system.' },
+      { kind: 'heading', text: 'A Better Definition of Success' },
+      { kind: 'paragraph', text: 'I now use a simple test:' },
+      { kind: 'list', items: [
+        'Did we improve customer value?',
+        'Did we improve team capability?',
+        'Did we improve decision quality?',
+      ] },
+      { kind: 'paragraph', text: 'If the answer is yes to all three, that is success — even if the path included setbacks.' },
+      { kind: 'paragraph', text: 'Because in product, failures are not always a negative signal. Sometimes they are evidence that you are operating at the right edge of ambition. The opposite is also true: smooth execution can be a warning sign if the team is only optimizing for safe, low-impact work.' },
+      { kind: 'heading', text: 'The Leadership Shift' },
+      { kind: 'paragraph', text: 'The most successful leaders I\'ve worked with do three things consistently:' },
+      { kind: 'list', items: [
+        'They compete with the previous version of themselves, not the nearest colleague.',
+        'They reward rigor and learning, not just visible outcomes.',
+        'They build environments where teams can recover quickly from bad calls without losing momentum.',
+      ] },
+      { kind: 'paragraph', text: 'That mindset transforms culture. Teams stop hiding risk. People escalate earlier. Assumptions are tested sooner. Decision cycles shorten. Quality goes up.' },
+      { kind: 'heading', text: 'Closing' },
+      { kind: 'paragraph', text: 'For me, the secret of being successful is simple: define success in a way that compounds.' },
+      { kind: 'paragraph', text: 'When your standards are rooted in clarity, growth, and execution quality, success stops being an occasional event and becomes your default operating model.' },
+    ],
+  },
+  {
+    slug: 'energy-is-not-strategy',
+    title: 'Energy Is Not Strategy: What a Marathon Taught Me About Product Execution',
+    subtitle: 'A half marathon with no training, cramped legs, and 200 meters of crawling — and the product leadership lessons I still carry from it.',
+    readTime: '7 min read',
+    date: 'June 2025',
+    type: 'article',
+    content: [
+      { kind: 'paragraph', text: 'The first kilometer feels easy. The middle tests your discipline. The final stretch reveals your character.' },
+      { kind: 'paragraph', text: 'That is true for marathons, and it is true for product leadership.' },
+      { kind: 'heading', text: 'The Run I Almost Didn\'t Start' },
+      { kind: 'paragraph', text: 'I had always dreamed about running a marathon but never had the courage to register. Chennai heat, uncertain stamina, zero training — the excuses were comfortable. Then I saw a poster for the Dusk to Dawn Chennai Night Marathon 2016 — a night run raising awareness for underprivileged children\'s education. A night marathon for a good cause. I started the registration form over a hundred times and closed it every time.' },
+      { kind: 'paragraph', text: 'A colleague who had completed six half marathons finally pushed me. I registered for 21 kilometers with less than two weeks to go. No training plan. No practice runs. Just belief and overconfidence.' },
+      { kind: 'paragraph', text: 'Then, a week before the run, I lost an old school friend unexpectedly. For days I couldn\'t concentrate on anything. I wasn\'t sure I\'d even show up at the starting line.' },
+      { kind: 'paragraph', text: 'On the eve of the marathon, I decided to complete it and dedicate it to him.' },
+      { kind: 'heading', text: 'Phase 1: The Illusion of Pace' },
+      { kind: 'paragraph', text: 'At 10:30 PM, the flags waved. Two hundred runners started with energy and happiness. Within the first kilometer, half my stamina was gone. Then I saw elderly runners, kids, and experienced athletes cruising past me — and something shifted. I stopped thinking about speed and just kept moving.' },
+      { kind: 'paragraph', text: 'I completed the first 10.5 kilometers in one hour. I was ecstatic. I started imagining a top-10 finish. The first half was fun, easy, and full of adrenaline.' },
+      { kind: 'paragraph', text: 'In product cycles, this is Phase 1: everything feels possible. Teams sprint out of the gate with energy and optimism. Output rises, but clarity does not. Early acceleration feels good. Sustained delivery requires design.' },
+      { kind: 'heading', text: 'Phase 2: The Wall' },
+      { kind: 'paragraph', text: 'The second half was a different race. Cramps hit my left leg. Half the field had already dropped out. I slowed to a walk, nearly quit, and started calculating excuses.' },
+      { kind: 'paragraph', text: 'Then a woman in her mid-forties cruised past me at a steady pace, earphones in, not even looking tired. Something competitive kicked in. I sprinted past her. She caught up within minutes at the same consistent pace. I sprinted again. She caught up again. This pattern repeated for kilometers.' },
+      { kind: 'paragraph', text: 'She wasn\'t racing me. She was running her own pace. And her consistency was destroying my bursts.' },
+      { kind: 'paragraph', text: 'Every marathon has a wall. In product, this is where hidden complexity appears: integration debt, dependency delays, quality concerns, stakeholder conflicts. The way through is not brute force. It is controlled adaptation — reassess, reduce noise, protect rhythm, focus on the next checkpoint.' },
+      { kind: 'heading', text: 'Phase 3: Finishing With Intent' },
+      { kind: 'paragraph', text: 'With 2.5 kilometers left, my left leg cramped completely. I slowed to a crawl. Then at 500 meters, my right leg seized too. I couldn\'t move. Someone collapsed right in front of me. The medical team rushed in.' },
+      { kind: 'paragraph', text: 'I seriously considered accepting a ride to the finish line. But then I thought about the office colleagues who\'d doubted I could finish, my friend I\'d dedicated this run to, and a line that flashed in my mind: "Do until you die."' },
+      { kind: 'paragraph', text: 'I took a pain relief spray, removed my shoes, and started moving. The final 200 meters took fifteen minutes. A tortoise would have beaten me. But I crossed the finish line.' },
+      { kind: 'quote', text: 'At 15 km I thought I was dead. At 17 km I wished I was dead. At 20 km I knew I was dead. At 21 km I realized I had become too tough to kill.' },
+      { kind: 'paragraph', text: 'The moment I received the finishing medal, I felt like I\'d conquered the world.' },
+      { kind: 'heading', text: 'The Product Leadership Parallel' },
+      { kind: 'paragraph', text: 'That run changed how I think about execution:' },
+      { kind: 'list', items: [
+        'Don\'t optimize for early applause. Optimize for completion quality.',
+        'Don\'t run someone else\'s pace. Run a pace your system can sustain.',
+        'Don\'t mistake discomfort for failure. Discomfort is often the entry fee for growth.',
+        'Don\'t lead through adrenaline alone. Lead through structure.',
+        'The competition isn\'t against other runners — it\'s against the voice inside you that wants to quit.',
+      ] },
+      { kind: 'paragraph', text: 'In high-stakes product environments, teams don\'t need heroic speeches every week. They need operating clarity that survives uncertainty.' },
+      { kind: 'heading', text: 'Closing' },
+      { kind: 'paragraph', text: 'A marathon is not won by the strongest start. It is won by the smartest endurance.' },
+      { kind: 'paragraph', text: 'The person who starts the race is not the same person who finishes it. The same is true for teams and products. If you finish stronger than you started — with better judgment and deeper resilience — you did more than deliver. You evolved.' },
+      { kind: 'paragraph', text: 'That is the kind of execution that scales.' },
+    ],
+  },
+  {
+    slug: 'plf-convergence-2026',
+    title: 'PLF Convergence 2026 — Takeaways from a PM\'s Lens',
+    subtitle: 'Key insights from the Product Leaders Forum on AI platforms, decision-making under ambiguity, and what not to build.',
+    readTime: '3 min read',
+    date: 'May 2025',
+    type: 'field-note',
+    content: [
+      { kind: 'paragraph', text: 'Travelled to Bangalore for the Product Leaders Forum 2026, and it reshaped how I think about product in an AI-first world. A few discussions stood out:' },
+      { kind: 'heading', text: 'AI Is Moving from Applications to Platforms' },
+      { kind: 'paragraph', text: 'The AI frontier is shifting from point applications to platform ecosystems. PMs need to start thinking ecosystem-first rather than feature-first — especially as AI becomes more affordable and accessible. This aligns with what I\'ve seen in practice: the teams that win are the ones building platforms others can build on, not just features others can copy.' },
+      { kind: 'heading', text: 'Decisions Aren\'t Always Data-Perfect' },
+      { kind: 'paragraph', text: 'Product decisions often sit between clarity and ambiguity — sometimes backed by strong data, sometimes driven by incomplete insights. Navigating this while managing differences across partners, stakeholders, and clients is a critical PM skill. The best PMs I\'ve seen don\'t wait for perfect data; they build decision frameworks that work with imperfect inputs.' },
+      { kind: 'heading', text: 'What Not to Build Matters More' },
+      { kind: 'paragraph', text: 'One recurring theme: prioritization through restraint. Knowing what to ship is important — but knowing what not to ship is often more critical for focus, scalability, and long-term impact. This is a lesson that gets harder to apply as teams scale, but it\'s where the highest leverage sits.' },
+      { kind: 'heading', text: 'Other Key Takeaways' },
+      { kind: 'list', items: [
+        'Strong PM thinking follows a clear flow: What → Why → Who → How (GTM). Building is only half the job — selling the solution internally and externally is just as important.',
+        'Design for workflows, not just problems. Great solutions fit naturally into how customers actually work.',
+        'Common GenAI pitfalls: ignoring the ecosystem, weak AI governance, and failing to build trust with customers. AI success is as much about responsibility and trust as capability.',
+        'Deployment models are changing — more clients are asking for self-hosted AI options. PMs must factor this into product strategy.',
+      ] },
+      { kind: 'paragraph', text: 'Great learning experience. Would love to see more such forums happen regularly.' },
+    ],
+  },
+  {
+    slug: 'producttank-chennai-ai-security',
+    title: 'Security by Design — ProductTank Chennai Takeaways',
+    subtitle: 'Notes from a ProductTank meetup on AI product security, legacy modernization, and navigating uncertainty.',
+    readTime: '2 min read',
+    date: 'June 2025',
+    type: 'field-note',
+    content: [
+      { kind: 'paragraph', text: 'Spent a day at ProductTank Chennai diving into the future of product and tech. The insights were practical, the conversations were honest, and the community energy was strong.' },
+      { kind: 'heading', text: 'AI Product Security Is the Foundation of Trust' },
+      { kind: 'paragraph', text: 'My biggest highlight was the session on AI product security. In the age of AI, security isn\'t a luxury — it\'s the foundation of trust. Learning how to integrate security into the product lifecycle from day one reinforced something I\'ve seen in my own work: governance done right accelerates adoption because teams trust the workflow.' },
+      { kind: 'heading', text: 'Turning Legacy Anchors into Agile MVPs' },
+      { kind: 'paragraph', text: 'Loved the tactical approach to rapid modernization — turning legacy "anchors" into agile MVPs. This resonates deeply with enterprise product work where migration and modernization are constant challenges.' },
+      { kind: 'heading', text: 'Staying Resilient When the Roadmap Is Blurry' },
+      { kind: 'paragraph', text: 'Great perspective on product thinking under uncertainty. The best product teams don\'t wait for clarity — they create it through structured experimentation and disciplined iteration.' },
+      { kind: 'paragraph', text: 'Beyond the talks, the networking and side conversations made the day worthwhile. It\'s always refreshing to be in a room full of curious minds building better products together.' },
+    ],
+  },
+]
+
+export function findArticleBySlug(slug: string) {
+  return articles.find((a) => a.slug === slug)
+}
